@@ -21,7 +21,7 @@ document
 add.addEventListener('click', event => {
   event.preventDefault();
 
-  const num = getRandomIntInclusive(mini, maxa);
+  const num = getRandomIntInclusive(mini.value, maxa.value);
 
   p.innerText = num;
 });
