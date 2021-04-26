@@ -22,7 +22,10 @@ document
 add.addEventListener('click', event => {
   event.preventDefault();
 
-  const num = getRandomIntInclusive(mini.value, maxa.value);
-
-  p.innerText = num;
+  if (mini.value < maxa.value) {
+    const num = getRandomIntInclusive(mini.value, maxa.value);
+    p.innerText = num;
+  } else {
+    p.innerText = 'Maximum is less than minimum.';
+  }
 });
