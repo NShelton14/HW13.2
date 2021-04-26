@@ -3,8 +3,9 @@ const mini = document.getElementById('mini');
 const maxa = document.getElementById('maxa');
 const add = document.getElementById('add');
 const p = document.createElement('p');
+const output = document.getElementById('out');
 
-document.body.appendChild(p);
+output.appendChild(p);
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
