@@ -1,9 +1,10 @@
-const color = document.getElementById("color");
-const mini = document.getElementById("mini");
-const maxa = document.getElementById("maxa");
-const p = document.createElement("p");
+const color = document.getElementById('color');
+const mini = document.getElementById('mini');
+const maxa = document.getElementById('maxa');
+const add = document.getElementById('add');
+const p = document.createElement('p');
 
-body.document.appendChild(p);
+document.body.appendChild(p);
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -17,8 +18,10 @@ document
     p.style.color = event.target.value;
   });
 
-document.querySelector("submit").addEventListener('click', event => {
-  const num = getRandomIntInclusive(mini.value, maxa.value);
+add.addEventListener('click', event => {
+  event.preventDefault();
+
+  const num = getRandomIntInclusive(mini, maxa);
 
   p.innerText = num;
-})
+});
